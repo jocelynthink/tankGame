@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <canvas id="tankMap" width="400px" height="400px" style="background-color:black"></canvas>
+    <script type="text/javascript">
+        var canvas1 = document.getElementById('tankMap');
+        var cxt = canvas1.getContext("2d");
+        var hexoX = 200;
+        var hexoY = 200;
+        cxt.fillStyle="#BA9658";
+        cxt.fillRect(hexoX,hexoY,5,30);
+        cxt.fillRect(hexoX+15,hexoY,5,30);
+        cxt.fillRect(hexoX+6,hexoY+5,8,20);
+        cxt.fillStyle = "#FEF26E";
+        cxt.arc(hexoX+10,hexoY+15,4,0,360,false);
+        cxt.fill();
+
+        cxt.strokeStyle="#FEF26E";
+        cxt.lineWidth = 1.5;
+        cxt.beginPath();
+        cxt.moveTo(hexoX+10,hexoY+15);
+        cxt.lineTo(hexoX+10,hexoY);
+        cxt.closePath();
+        cxt.stroke();
+
+    </script>
+    </body>
+</html>

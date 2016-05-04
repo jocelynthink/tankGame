@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css" media="screen">
+            
+        </style>
+    </head>
+    <body>
+    <canvas id="can1" width="500px" height="400px" style="border:1px solid red">
+        
+    </canvas>
+    <script type="text/javascript">
+        //1.得到画布
+        var canvas = document.getElementById('can1');
+        //2.得到上下文环境，我们可以来绘制图片
+        var cxt = canvas.getContext("2d");
+        cxt.fillStyle="#FF0000";
+        cxt.fillRect(0,0,150,75); 
+
+        cxt.fillStyle = "rgba(0,0,255,0.5)";
+        cxt.fillRect(120,60,50,50);
+        cxt.strokeStyle="blue";
+        cxt.strokeRect(200,90,20,20);
+        cxt.clearRect(40,40,10,10);
+
+        cxt.beginPath();
+        cxt.moveTo(20,200);
+        cxt.lineTo(20,290);
+        cxt.lineTo(80,290);
+        cxt.closePath();
+        cxt.fill();
+
+        cxt.beginPath();
+        cxt.arc(300,300,50,0,360,false);
+        cxt.closePath();
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.arc(300,300,45,0,360,false);
+        cxt.closePath();
+        cxt.stroke();
+
+
+        cxt.font = "bold 14px Arial";
+        cxt.textAlign = "center";
+        cxt.textBaseline = "middle";
+        cxt.fillText("第一个文字",100,20);
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css" media="screen">
+           *{
+                margin:0 auto;
+           }
+           .box{
+                width: 400px;
+                text-align: center;
+           }
+           .box p{
+                text-align: left;
+           }
+
+        </style>
+    </head>
+    <body onkeydown="getCommand()">
+    <div class="box">
+        <h1>我的坦克大战游戏</h1>
+        <canvas id="tankMap" width="400px" height="300px" style="background-color:black"></canvas>
+        <p>设置敌人个数：<input type="text" name="enemySize" value="3" id="enemySize"/>
+        <input type="button" value="开始游戏" id="startgame"/>
+        </p>
+        <p>你的得分:<span id="goal"></span></p>
+    </div>
+    <script type="text/javascript" src="tankgame8.js"></script>
+    </body>
+</html>

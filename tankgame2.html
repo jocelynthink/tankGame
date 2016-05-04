@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body onkeydown="test()">
+    <canvas id="tankMap" width="400px" height="400px" style="background-color:black"></canvas>
+    <script type="text/javascript">
+    var canvas1 = document.getElementById('tankMap');
+    var cxt = canvas1.getContext("2d");
+   
+    var ballX = 30;
+    var ballY= 30;
+    function drawBall(){   
+        cxt.beginPath();     
+        cxt.fillStyle = "#FF0000";
+        cxt.arc(ballX,ballY,10,0,360,false);
+        cxt.closePath();
+        cxt.fill();
+    }
+    drawBall();
+    function test(){
+        cxt.clearRect(0,0,400,400);
+        var code = event.keyCode;
+        switch(code){
+            case 87:
+                ballY--;
+                break;
+            case 68:
+                ballX++;
+                break;
+            case 83:
+                ballY++;
+                break;
+            case 65:
+                ballX--;
+                break;
+        }
+        drawBall();
+    }
+    </script>
+    </body>
+</html>
